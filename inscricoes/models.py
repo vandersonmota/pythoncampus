@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from django.db import models
-from brfields import CpfField
 
 TIPO_MINI_EVENTO = (
     ('palestra','Palestra'),
@@ -18,33 +17,34 @@ class MiniEvento(models.Model):
     tipo = models.CharField('Tipo',choices=TIPO_MINI_EVENTO, max_length=10)
     vagas_disponiveis = models.IntegerField('Numero de Vagas',default=0)
     participantes = models.ManyToManyField('Inscrito',)
-    
-    
+
+
     def _disponivel(self):
         if self.vagas_disponiveis >= 1:
             return True
         return False
-    
+
     def registrar_participante(self, participante):
         if self._disponivel():
             self.participantes.add(participante)
             self.vagas_disponiveis -= 1
         else:
             raise Exception('Não há vagas')
-    
+
 class Inscrito(models.Model):
     nome = models.CharField('Nome',max_length=100)
     instituicao = models.CharField('Instituição',max_length=100)
-    cpf = CpfField('CPF',max_length=11,unique=True)
+    cpf = models.CharField('CPF',max_length=14,unique=True)
     minicurso = models.ManyToManyField('MiniEvento', limit_choices_to={'tipo':'minicurso'})
-    
+
     def inscrever(self, minicurso):
         minicurso.registrar_participante(self)
         self.minicurso.add(minicurso)
-            
-    
-    
+
+
+
 class Ministrante(models.Model):
     nome = models.CharField('Nome',max_length=100)
     descricao = models.TextField('Quem é',max_length=500)
     site = models.URLField('Site/Blog')
+
