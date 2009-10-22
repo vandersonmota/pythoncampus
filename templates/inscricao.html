@@ -1,0 +1,15 @@
+<div class="page_title">Edicao de dados</div>
+<div class="form_div">
+    <form action="" method="post">
+        {% for field in form %}
+            <div class="field_div">
+                <span class="field_label">{{ field.label_tag }}:</span>
+                <span class="field">{{ field }}</span>
+                <span class="field_error">{{ field.errors }}</span>
+            </div>
+        {% endfor %}
+        <input type="submit" value=' Confirmar Inscrição '/>        
+    </form>
+    Para informações acerca dos
+        minicursos clique <a target='_blank' href='minicursos'>aqui</a>.
+</div>

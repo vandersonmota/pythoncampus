@@ -16,7 +16,10 @@ class MiniEvento(models.Model):
     local = models.CharField('Local',max_length=50)
     tipo = models.CharField('Tipo',choices=TIPO_MINI_EVENTO, max_length=10)
     vagas_disponiveis = models.IntegerField('Numero de Vagas',default=0)
-    participantes = models.ManyToManyField('Inscrito',)
+    participantes = models.ManyToManyField('Inscrito',blank=True)
+    
+    def __unicode__(self):
+        return self.nome
 
 
     def _disponivel(self):
@@ -36,15 +39,22 @@ class Inscrito(models.Model):
     instituicao = models.CharField('Instituição',max_length=100)
     cpf = models.CharField('CPF',max_length=14,unique=True)
     minicurso = models.ManyToManyField('MiniEvento', limit_choices_to={'tipo':'minicurso'})
+    
+    def __unicode__(self):
+        return self.nome
 
     def inscrever(self, minicurso):
         minicurso.registrar_participante(self)
         self.minicurso.add(minicurso)
-
+        
+        
 
 
 class Ministrante(models.Model):
     nome = models.CharField('Nome',max_length=100)
     descricao = models.TextField('Quem é',max_length=500)
     site = models.URLField('Site/Blog')
+    
+    def __unicode__(self):
+        return self.nome
 
