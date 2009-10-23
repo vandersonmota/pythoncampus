@@ -1,0 +1,22 @@
+<div class="page_title">Minicursos</div>
+<div class="eventos_div">
+        {% for minicurso in object_list%}
+            <div class="palestra_div">
+                Título: <span class="titulo">{{ minicurso.nome }}</span><br/>
+                Descrição: <span class="descricao">{{ minicurso.descricao }}</span>,<br/>
+                Público-alvo: <span class="publico_alvo">{{ minicurso.publico_alvo}}</span><br/>
+                Data: <span class="data">{{ minicurso.data}}</span><br/>
+                Horário: <span class="hora">{{ minicurso.horario}}</span><br/>
+                Ministrante:
+                <span class="minicurso">
+                   <a class="info_ministrante" href="/ministrante/{{minicurso.ministrante.id}}">
+                      {{ minicurso.ministrante}}
+                   </a>
+                </span><br/>
+                Vagas Disponíveis: <span class="vagas">{{ minicurso.vagas_disponiveis}}</span><br/>
+            </div>
+            
+            
+        {% endfor %}    
+</div>
+
