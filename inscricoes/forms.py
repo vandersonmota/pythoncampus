@@ -10,5 +10,12 @@ class FormularioInscrito(forms.ModelForm):
     
     class Meta:
         model = Inscrito
+        
+    def save(self, force_insert=False, force_update=False, commit=True):
+        inscrito = super(FormularioInscrito, self).save(commit=True)
+        minicursos = self.cleaned_data.get('minicurso',[])
+        for minicurso in minicursos: 
+            inscrito.inscrever(minicurso)
+        inscrito.save()
 
 

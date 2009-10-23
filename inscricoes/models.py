@@ -38,7 +38,8 @@ class Inscrito(models.Model):
     nome = models.CharField('Nome',max_length=100)
     instituicao = models.CharField('Instituição',max_length=100)
     cpf = models.CharField('CPF',max_length=14,unique=True)
-    minicurso = models.ManyToManyField('MiniEvento', limit_choices_to={'tipo':'minicurso'})
+    minicurso = models.ManyToManyField('MiniEvento', limit_choices_to={'tipo':'minicurso'},
+                                       blank=True, null=True)
     
     def __unicode__(self):
         return self.nome
@@ -53,7 +54,7 @@ class Inscrito(models.Model):
 class Ministrante(models.Model):
     nome = models.CharField('Nome',max_length=100)
     descricao = models.TextField('Quem é',max_length=500)
-    site = models.URLField('Site/Blog')
+    site = models.URLField('Site/Blog', blank=True, null=True)
     
     def __unicode__(self):
         return self.nome

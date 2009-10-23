@@ -10,8 +10,12 @@ from windmill.authoring import djangotest
 #This is only to have pyhistorian integration
 class WindmillStoryRunner(djangotest.WindmillDjangoUnitTest):
     test_dir = path.join(path.dirname(path.abspath(__file__)),"stories")
-    browser = "firefox"
+    bronwser = "firefox"
 
+
+
+        
+    
 
 class InscricaoEmMinicurso(TestCase):
 

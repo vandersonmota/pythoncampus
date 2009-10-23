@@ -2,6 +2,7 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.views.generic.create_update import create_object
+from django.http import HttpResponseRedirect
 from models import MiniEvento,Inscrito
 from forms import FormularioInscrito
 
@@ -10,12 +11,3 @@ def inscricao_base_view(request):
         'index.html',
         context_instance=RequestContext(request)
     )
-    
-def inscricao(request):
-    if request.method == 'post':
-        pass
-    else:
-        return create_object(request,
-                             form_class = FormularioInscrito,
-                             template_name = 'inscricao.html',
-                             post_save_redirect = '/')
