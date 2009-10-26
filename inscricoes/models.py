@@ -17,6 +17,9 @@ class DadosMiniEvento(models.Model):
 class Palestra(models.Model):
     minievento = models.OneToOneField('DadosMiniEvento')
     palestrante = models.ForeignKey('Ministrante',)
+    
+    def __unicode__(self):
+        return self.minievento.nome
 
 class MiniCurso(models.Model):
     minievento = models.OneToOneField('DadosMiniEvento')
@@ -25,7 +28,7 @@ class MiniCurso(models.Model):
     
     
     def __unicode__(self):
-        return self.nome
+        return self.minievento.nome
 
 
     def _disponivel(self):
