@@ -6,30 +6,23 @@ TIPO_MINI_EVENTO = (
     ('minicurso','Minicurso')
     )
 
-class DadosMiniEvento(models.Model):
+class MiniEvento(models.Model):
     nome = models.CharField('Nome',max_length=100)
     descricao = models.TextField('Descriçao',max_length=500)
     publico_alvo = models.CharField('Público Alvo',max_length=50)
     data = models.DateField('Data')
     horario = models.TimeField('Horario')
     local = models.CharField('Local',max_length=50)
-
-class Palestra(models.Model):
-    minievento = models.OneToOneField('DadosMiniEvento')
-    palestrante = models.ForeignKey('Ministrante',)
     
     def __unicode__(self):
-        return self.minievento.nome
+        return self.nome
 
-class MiniCurso(models.Model):
-    minievento = models.OneToOneField('DadosMiniEvento')
+class Palestra(MiniEvento):
+    palestrante = models.ForeignKey('Ministrante',)
+
+class MiniCurso(MiniEvento):
     ministrante = models.ForeignKey('Ministrante',)
     vagas_disponiveis = models.IntegerField('Numero de Vagas',default=0)
-    
-    
-    def __unicode__(self):
-        return self.minievento.nome
-
 
     def _disponivel(self):
         if self.vagas_disponiveis >= 1:

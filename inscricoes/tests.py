@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.test import TestCase
-from models import Inscrito, DadosMiniEvento, Ministrante, MiniCurso
+from models import Inscrito, Ministrante, MiniCurso
 
 from os import path
 from django.test.client import Client
@@ -15,12 +15,10 @@ class InscricaoEmMinicurso(TestCase):
     def setUp(self):
         ministrante_grok = Ministrante.objects.create(nome='Gustavo Rezende', descricao='Mó patinho no DOTA',
                                                            site = 'http://nsigustavo.blogspot.com')
-
-        dados_minievento = DadosMiniEvento.objects.create(nome='Aprendendo Grok', descricao='Um curso fácil de grok',
-                                                        publico_alvo='Masoquistas', data='2012-12-12',
-                                                        horario='16:00:00', local='Laboratório 01',)
         
-        self.minicurso_grok = MiniCurso.objects.create(minievento = dados_minievento, ministrante=ministrante_grok,
+        self.minicurso_grok = MiniCurso.objects.create(nome='Aprendendo Grok', descricao='Um curso fácil de grok',
+                                                        publico_alvo='Masoquistas', data='2012-12-12',
+                                                        horario='16:00:00', local='Laboratório 01', ministrante=ministrante_grok,
                                                        vagas_disponiveis=1)
 
         self.jim_fulton = Inscrito.objects.create(nome='Jim Fulton', instituicao='Zope Corporation',cpf='12345678910')

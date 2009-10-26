@@ -154,47 +154,28 @@ body {
 }
 
 .dia {
-    margin-top:10px;
-    border-bottom: 1px solid #da2827;
+    border: 1px solid #da2827;
+    padding:5px;
+    height: 100%
 }
 
-.lista_minievento{
-    /*background: #ffffff url(/media/imagens/minievento_background.png) no-repeat;*/
-    padding-left:10px;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    float:left;
-    width:430px;
-    height: auto;
+.dia .palestras, .dia .minicursos {
+    border: 1px solid #da2827;
+    padding:5px;
+    float: left;
 }
 
-.minievento{
-    padding-left:5px;
-    padding-top: 10px;
-    margin-bottom: 15px;
-    border-bottom: 1px dotted #669933;
-    border-left: 1px solid #669933;
-}
-
-.cabecalho_lista_minieventos {
-    background: #ffffff url(/media/imagens/minievento_background.png) no-repeat;
-    margin-left: 2px;
-    padding-top:15px;
-    padding-left:10px;
-    font-size: x-large;
-    /*border-bottom: 1px dotted #669933;*/
-}
-
-.minievento_atributo {
-    color: #669933;
-    font-weight: bold;
-}
-
-.minievento_atributo .label{
-    color: #da2827;
-}
-
-.minievento_atributo a{
-
-    color:#da2827;
-}
+/*.dia .palestras {*/
+/*    width: 45%;*/
+/*    border: 1px solid #da2827;*/
+/*    padding:5px;*/
+/*}*/
+/**/
+/*.dia .minicursos {*/
+/*    width: 45%;*/
+/*    border: 1px solid #da2827;*/
+/*    padding:5px;*/
+/*    position: relative;*/
+/*    left: 50%;*/
+/*    top: auto;*/
+/*}*/
