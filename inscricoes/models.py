@@ -6,17 +6,23 @@ TIPO_MINI_EVENTO = (
     ('minicurso','Minicurso')
     )
 
-class MiniEvento(models.Model):
+class DadosMiniEvento(models.Model):
     nome = models.CharField('Nome',max_length=100)
     descricao = models.TextField('Descriçao',max_length=500)
-    publico_alvo = models.CharField('Publico Alvo',max_length=50)
-    ministrante = models.ForeignKey('Ministrante',)
+    publico_alvo = models.CharField('Público Alvo',max_length=50)
     data = models.DateField('Data')
     horario = models.TimeField('Horario')
     local = models.CharField('Local',max_length=50)
-    tipo = models.CharField('Tipo',choices=TIPO_MINI_EVENTO, max_length=10)
+
+class Palestra(models.Model):
+    minievento = models.OneToOneField('DadosMiniEvento')
+    palestrante = models.ForeignKey('Ministrante',)
+
+class MiniCurso(models.Model):
+    minievento = models.OneToOneField('DadosMiniEvento')
+    ministrante = models.ForeignKey('Ministrante',)
     vagas_disponiveis = models.IntegerField('Numero de Vagas',default=0)
-    participantes = models.ManyToManyField('Inscrito',blank=True)
+    
     
     def __unicode__(self):
         return self.nome
@@ -28,11 +34,12 @@ class MiniEvento(models.Model):
         return False
 
     def registrar_participante(self, participante):
-        if self._disponivel():
-            self.participantes.add(participante)
+        if self._disponivel():            
             self.vagas_disponiveis -= 1
         else:
-            raise Exception('Não há vagas')
+            participante.estado = 'espera'
+            
+        self.inscrito_set.add(participante)    
 
 class Inscrito(models.Model):
     ESTADOS = (('pendente', 'Pendente'),
@@ -42,8 +49,7 @@ class Inscrito(models.Model):
     nome = models.CharField('Nome',max_length=100)
     instituicao = models.CharField('Instituição',max_length=100)
     cpf = models.CharField('CPF',max_length=14,unique=True)
-    minicurso = models.ManyToManyField('MiniEvento', limit_choices_to={'tipo':'minicurso'},
-                                       blank=True, null=True)
+    minicurso = models.ManyToManyField('MiniCurso', blank=True, null=True)
     estado = models.CharField(max_length=20, choices=ESTADOS, default='pendente')
     
     def __unicode__(self):

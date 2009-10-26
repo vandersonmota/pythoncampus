@@ -12,7 +12,14 @@ def inscricao_base_view(request):
         context_instance=RequestContext(request)
     )
     
-def minicursos(request):
+def programacao(request):
+    palestras_dia_27 = MiniEvento.objects.filter(
+        tipo='palestra',
+        data__day=27).order_by('horario')
+    palestras_dia_28 = MiniEvento.objects.filter(
+        tipo='palestra',
+        data__day=28).order_by('horario')
+    
     minicursos_dia_27 = MiniEvento.objects.filter(
         tipo='minicurso',
         data__day=27).order_by('horario')
@@ -21,8 +28,10 @@ def minicursos(request):
         data__day=28).order_by('horario')
     
     return render_to_response(
-        'minicursos.html',
+        'programacao.html',
         {
+            'palestras_dia_27':palestras_dia_27,
+            'palestras_dia_28':palestras_dia_28,
             'minicursos_dia_27':minicursos_dia_27,
             'minicursos_dia_28':minicursos_dia_28,
         },

@@ -1,6 +1,6 @@
 from django.conf.urls.defaults import *
 from django.conf import settings
-from inscricoes.models import MiniEvento, Ministrante
+from inscricoes.models import Palestra, Ministrante
 from inscricoes.forms import FormularioInscrito
 
 # Uncomment the next two lines to enable the admin:
@@ -17,8 +17,6 @@ urlpatterns = patterns('',
     (r'^inscricao/$','django.views.generic.create_update.create_object',
         {'form_class': FormularioInscrito,'template_name': 'inscricao.html',
         'post_save_redirect': '/'}),
-    (r'^palestras/$', object_list,
-        {'queryset':MiniEvento.objects.filter(tipo='palestra'), 'template_name':'palestras.html'}),
     (r'^programacao/', 'inscricoes.views.programacao'),
     (r'^ministrante/(?P<object_id>\d+)',object_detail,
      {'queryset': Ministrante.objects.all(),'template_name':'detalhes_ministrante.html',}
