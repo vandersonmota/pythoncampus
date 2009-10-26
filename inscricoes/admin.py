@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import MiniEvento,Ministrante,Inscrito, MiniCurso, Palestra
+from models import DadosMiniEvento,Ministrante,Inscrito, MiniCurso, Palestra
 
 admin.site.register(Ministrante)
 admin.site.register(DadosMiniEvento)
