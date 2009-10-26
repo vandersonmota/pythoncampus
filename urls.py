@@ -19,7 +19,7 @@ urlpatterns = patterns('',
         'post_save_redirect': '/'}),
     (r'^palestras/$', object_list,
         {'queryset':MiniEvento.objects.filter(tipo='palestra'), 'template_name':'palestras.html'}),
-    (r'^minicursos/', 'inscricoes.views.minicursos'),
+    (r'^programacao/', 'inscricoes.views.programacao'),
     (r'^ministrante/(?P<object_id>\d+)',object_detail,
      {'queryset': Ministrante.objects.all(),'template_name':'detalhes_ministrante.html',}
     ),
