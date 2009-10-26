@@ -1,0 +1,8 @@
+{% extends "pagina_base.html" %}
+
+{% block conteudo %}
+        Nome : {{ object.nome }}<br/>
+        <img src="{{ MEDIA_URL}}{{ object.foto }}"><br/>
+        Quem é : {{ object.descricao|linebreaksbr }}<br/>
+        Site/Blog : <a href="{{ object.site }}">{{ object.site }}</a>
+{% endblock conteudo %}

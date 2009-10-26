@@ -1,15 +1,21 @@
-<div class="page_title">Edicao de dados</div>
-<div class="form_div">
-    <form action="/inscricao/" method="post">
-        {% for field in form %}
-            <div class="field_div">
-                <span class="field_label">{{ field.label_tag }}:</span>
-                <span class="field">{{ field }}</span>
-                <span class="field_error">{{ field.errors }}</span>
-            </div>
-        {% endfor %}
-        <input type="submit" value=' Confirmar Inscrição '>        
-    </form>
-    Para informações acerca dos
-        minicursos clique <a target='_blank' href='/minicursos/'>aqui</a>.
-</div>
+{% extends "pagina_base.html" %}
+
+{% block conteudo %}
+    <div class="titulo_pagina">Informações Cadastrais</div>
+    <div class="subtitulo_pagina">Todos os campos são obrigatórios, exceto minicurso.</div>
+    <div class="formulario_div">
+        <form action="" method="post">
+            {% for field in form %}
+                <div class="campo_div">
+                    <span class="campo_label">{{ field.label_tag }}:</span>
+                    <span class="campo">{{ field }}</span>
+                    <span class="campo_erro">{{ field.errors }}</span>
+                </div>
+            {% endfor %}
+            <input type="submit" value=' Confirmar Inscrição '/>        
+        </form>
+    </div>
+    <div class="informacoes_minicursos">
+        Para informações acerca dos minicursos clique <a target='_blank' href='minicursos'>aqui</a>.
+    </div>
+{% endblock conteudo %}

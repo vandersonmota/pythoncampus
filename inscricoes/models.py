@@ -54,6 +54,7 @@ class Inscrito(models.Model):
 class Ministrante(models.Model):
     nome = models.CharField('Nome',max_length=100)
     descricao = models.TextField('Quem é',max_length=500)
+    foto = models.ImageField(upload_to='imagens/ministrantes')
     site = models.URLField('Site/Blog', blank=True, null=True)
     
     def __unicode__(self):

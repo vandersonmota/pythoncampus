@@ -1,0 +1,192 @@
+/* estilo base */
+body {
+    padding              : 0;
+    margin               : 0;
+    background           : #585757 url(/media/imagens/bgGrad.gif) repeat-x scroll 0 0;
+    background-attachment: fixed;
+    
+}
+.conteudo {
+    display         : block;
+    background-color: white;
+    margin-top      : 150px;
+}
+
+.corpo {
+    background-color: white;
+    display         : block;
+    height          : 100%;
+    left            : 45%;
+    margin-left     : -380px;
+    position        : absolute;
+    width           : 923px;
+}
+
+.topo {
+    display         : block;
+    height          : 150px;
+    left            : 45%;
+    margin-left     : -380px;
+    position        : fixed;
+    width           : 923px;
+    background-color: white;
+}
+
+.logo {
+    position   : absolute;
+    left       : 50%;
+    top        : 0;
+    margin-left: -200px;
+    z-index    : 5;
+}
+
+.navegacao {
+    background-color   : #669933;
+    display            : block;
+    height             : 80px;
+    left               : 50%;
+    line-height        : normal;
+    list-style-image   : none;
+    list-style-position: outside;
+    list-style-type    : none;
+    margin-left        : -495px;
+    padding            : 0;
+    position           : absolute;
+    top                : 50px;
+    white-space        : nowrap;
+    width              : 987px;
+    z-index            : 2;
+    border-right       : 1px solid white;
+}
+
+.navegacao li {
+    background-color: #669933;
+    display         : block;
+    float           : left;
+    height          : 80px;
+    width           : 163px;
+    border-left     : 1px solid white;
+}
+
+.navegacao li a {
+    color          : white;
+    display        : block;
+    height         : 80px;
+    left           : 0;
+    line-height    : 120px;
+    position       : relative;
+    text-align     : center;
+    text-decoration: none;
+    width          : 163px;
+    font-variant   : small-caps;
+    font-weight    : bold;
+}
+.navegacao li:hover {
+    background-image: url(/media/imagens/bgmenu_ativo.png);
+}
+
+.cantoD , .cantoE {
+    display : block;
+    position: absolute;
+    top     : 145px;
+    height  : 20px;
+    width   : 33px;
+}
+
+.cantoD {
+    right: -32px;
+}
+
+.cantoE {
+    left: -32px;
+}
+
+.titulo_pagina {
+    padding-left:7px;
+    padding-top: 20px;
+    font-size:xx-large;
+    /*border-bottom:1px solid #eeeeee;*/
+}
+
+.subtitulo_pagina {
+    padding-left:5px;
+    font-size:large;
+    width:auto;
+    color:#da2827;
+    font-weight: bold;
+    /*border-bottom:1px solid #eeeeee;*/
+}
+
+.rodape {
+    background-color: #669933;
+    color: #ffffff;
+    padding:5px;
+    text-align:center;
+}
+
+/* fim do estilo base */
+
+/* estilo formulario inscrição */
+
+.formulario_div {
+    padding : 5px;
+}
+
+.campo_div {
+    padding:3px;
+}
+
+.campo_erro {
+    color: #da2827;
+    font-weight: bold;
+}
+
+/* fim estilo formulario inscrição */
+
+.informacoes_minicursos {
+    padding: 5px;
+}
+
+.informacoes_minicursos a {
+    text-decoration:none;
+    color:#669933;
+}
+
+.lista_minievento {
+    /*background: #ffffff url(/media/imagens/minievento_background.png) no-repeat;*/
+    /*border-left: 1px solid #669933;*/
+    padding-left:10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.minievento{
+    padding-left:5px;
+    padding-top: 10px;
+    /*margin-bottom: 15px;*/
+    border-bottom: 1px dotted #669933;
+    border-left: 1px solid #669933;
+}
+
+.cabecalho_lista_minieventos {
+    background: #ffffff url(/media/imagens/minievento_background.png) no-repeat;
+    margin-left: 2px;
+    padding-top:15px;
+    padding-left:10px;
+    font-size: x-large;
+    /*border-bottom: 1px dotted #669933;*/
+}
+
+.minievento_atributo {
+    color: #669933;
+    font-weight: bold;
+}
+
+.minievento_atributo .label{
+    color: #da2827;
+}
+
+.minievento_atributo a{
+
+    color:#da2827;
+}

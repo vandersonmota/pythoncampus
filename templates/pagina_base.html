@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+    <head>
+        <title>..:: PythOnCampus IFF ::..</title>
+        {% block estilo %}
+            <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL}}estilo/estilo_base.css"/>
+        {% endblock estilo %}
+    </head>
+    <body>
+        <div class="corpo">
+            <div class="topo">
+                <img class="logo" src="{{ MEDIA_URL }}imagens/sitelogop.png" />
+                <ul class="navegacao">
+                    <li>
+                        <a href="/">Página Inicial</a>
+                    </li>                    
+                    <li>
+                        <a href="/programacao">Programação</a>
+                    </li>
+                    <li>
+                        <a href="/inscricao">Inscrição</a>
+                    </li>
+                    <li>
+                        <a href="/local">Local</a>
+                    </li>
+                    <li>
+                        <a href="/contato">Contato</a>
+                    </li>
+                    <li>
+                        <a href="/equipe">Equipe</a>
+                    </li>
+                </ul>
+                <img class="cantoE" src="{{ MEDIA_URL }}imagens/cantoE.png" />
+                <img class="cantoD" src="{{ MEDIA_URL }}imagens/cantoD.png" />
+            </div>
+            <div class="conteudo">
+                {% block conteudo %}
+                
+                {% endblock conteudo %}
+            </div>
+            <div class="rodape">
+                NSI - IF Fluminense - Núcle de Pesquisa em Sistemas de Informação
+            </div>
+        <div>
+    </body>
+</html>

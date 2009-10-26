@@ -1,22 +1,65 @@
-<div class="page_title">Minicursos</div>
-<div class="eventos_div">
-        {% for minicurso in object_list%}
-            <div class="palestra_div">
-                Título: <span class="titulo">{{ minicurso.nome }}</span><br/>
-                Descrição: <span class="descricao">{{ minicurso.descricao }}</span>,<br/>
-                Público-alvo: <span class="publico_alvo">{{ minicurso.publico_alvo}}</span><br/>
-                Data: <span class="data">{{ minicurso.data}}</span><br/>
-                Horário: <span class="hora">{{ minicurso.horario}}</span><br/>
-                Ministrante:
-                <span class="minicurso">
-                   <a class="info_ministrante" href="/ministrante/{{minicurso.ministrante.id}}">
-                      {{ minicurso.ministrante}}
-                   </a>
-                </span><br/>
-                Vagas Disponíveis: <span class="vagas">{{ minicurso.vagas_disponiveis}}</span><br/>
-            </div>
-            
-            
-        {% endfor %}    
-</div>
+{% extends "pagina_base.html" %}
 
+{% block conteudo %}
+    <div class="titulo_pagina">Minicursos</div>
+    <div class="cabecalho_lista_minieventos">
+        Dia 27/11
+    </div>
+    <div class="lista_minievento">
+        {% for minicurso in minicursos_dia_27 %}
+            <div class="minievento">
+                <div class="minievento_atributo">
+                    <span class="label">Horário:</span>{{ minicurso.horario|time:"H:i"}}
+                </div>
+                <div class="minievento_atributo">
+                    <span class="label">Título:</span>{{ minicurso.nome }}
+                </div>
+                <div class="minievento_atributo">
+                    <span class="label">Descrição: </span>{{ minicurso.descricao|linebreaksbr }}
+                </div>
+                <div class="minievento_atributo">
+                    <span class="label">Público-alvo:</span>{{ minicurso.publico_alvo}}
+                </div>
+                <div class="minievento_atributo">
+                    <span class="label">Ministrante:
+                    <a class="info_ministrante" href="/ministrante/{{minicurso.ministrante.id}}">
+                      {{ minicurso.ministrante}}
+                    </a>
+                </div>
+                <div class="minievento_atributo">
+                    <span class="label">Vagas Disponíveis:</span>{{ minicurso.vagas_disponiveis}}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="cabecalho_lista_minieventos">
+        Dia 28/11
+    </div>
+    <div class="lista_minievento">
+        {% for minicurso in minicursos_dia_28 %}
+            <div class="minievento">
+                <div class="minievento_atributo">
+                    <span class="label">Título:</span>{{ minicurso.nome }}
+                </div>
+                <div class="minievento_atributo">
+                    <span class="label">Descrição: </span>{{ minicurso.descricao|linebreaksbr }}
+                </div>
+                <div class="minievento_atributo">
+                    <span class="label">Público-alvo:</span>{{ minicurso.publico_alvo}}
+                </div>
+                <div class="minievento_atributo">
+                    <span class="label">Horário:</span>{{ minicurso.horario|time:"H:i"}}
+                </div>
+                <div class="minievento_atributo">
+                    <span class="label">Ministrante:
+                    <a class="info_ministrante" href="/ministrante/{{minicurso.ministrante.id}}">
+                      {{ minicurso.ministrante}}
+                    </a>
+                </div>
+                <div class="minievento_atributo">
+                    <span class="label">Vagas Disponíveis:{{ minicurso.vagas_disponiveis}}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock conteudo %}
