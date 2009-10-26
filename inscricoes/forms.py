@@ -1,11 +1,11 @@
 from django import forms
 from django.contrib.localflavor.br.forms import BRCPFField
-from models import Inscrito,MiniEvento
+from models import Inscrito, MiniCurso
 
 class FormularioInscrito(forms.ModelForm):
     cpf = BRCPFField(label='CPF')
     minicurso = forms.ModelMultipleChoiceField(
-        queryset=MiniEvento.objects.filter(tipo='minicurso'),
+        queryset=MiniCurso.objects.all(),
         widget = forms.widgets.CheckboxSelectMultiple)
     
     class Meta:
