@@ -155,6 +155,7 @@ body {
 
 .dia {
     margin-top:10px;
+    border-bottom: 1px solid #da2827;
 }
 
 .lista_minievento{
