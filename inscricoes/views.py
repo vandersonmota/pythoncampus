@@ -13,7 +13,6 @@ def inscricao_base_view(request):
     )
     
 def programacao(request):
-    import ipdb;ipdb.set_trace()
     palestras_dia_27 = Palestra.objects.filter(minievento=DadosMiniEvento.objects.filter(data__day = 27).order_by('horario'))
     palestras_dia_28 = Palestra.objects.filter(minievento=DadosMiniEvento.objects.filter(data__day = 28).order_by('horario'))
     
