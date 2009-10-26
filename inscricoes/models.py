@@ -35,11 +35,16 @@ class MiniEvento(models.Model):
             raise Exception('Não há vagas')
 
 class Inscrito(models.Model):
+    ESTADOS = (('pendente', 'Pendente'),
+              ('confirmado', 'Confirmado'),
+              ('espera', 'Espera'))
+    
     nome = models.CharField('Nome',max_length=100)
     instituicao = models.CharField('Instituição',max_length=100)
     cpf = models.CharField('CPF',max_length=14,unique=True)
     minicurso = models.ManyToManyField('MiniEvento', limit_choices_to={'tipo':'minicurso'},
                                        blank=True, null=True)
+    estado = models.CharField(max_length=20, choices=ESTADOS, default='pendente')
     
     def __unicode__(self):
         return self.nome
