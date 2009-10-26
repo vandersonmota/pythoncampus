@@ -10,6 +10,7 @@ class FormularioInscrito(forms.ModelForm):
     
     class Meta:
         model = Inscrito
+        exclude = ('estado',)
         
     def save(self, force_insert=False, force_update=False, commit=True):
         inscrito = super(FormularioInscrito, self).save(commit=True)
