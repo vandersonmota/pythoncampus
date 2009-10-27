@@ -10,6 +10,7 @@ body {
     display         : block;
     background-color: white;
     margin-top      : 150px;
+    /*height: 100% !important;*/
 }
 
 .corpo {
@@ -30,6 +31,7 @@ body {
     position        : fixed;
     width           : 923px;
     background-color: white;
+    z-index:1;
 }
 
 .logo {
@@ -148,34 +150,86 @@ body {
     padding: 5px;
 }
 
+.cabecalho_lista_minieventos {
+    background: #ffffff url(/media/imagens/minievento_background.png) no-repeat;
+    margin-left: 2px;
+    padding-top:15px;
+    padding-left:10px;
+    font-size: x-large;
+    height:35px;
+    border-bottom: 1px dotted #669933;
+}
+
 .informacoes_minicursos a {
     text-decoration:none;
     color:#669933;
 }
 
 .dia {
-    border: 1px solid #da2827;
-    padding:5px;
-    height: 100%
-}
-
-.dia .palestras, .dia .minicursos {
-    border: 1px solid #da2827;
-    padding:5px;
     float: left;
+    width: 100%;
+    min-height: 250px;
+    position: relative;
+    height: auto !important;
+    /*border-bottom: 1px solid #da2827;*/
+    background-color: white;
+    z-index:0;
 }
 
-/*.dia .palestras {*/
-/*    width: 45%;*/
-/*    border: 1px solid #da2827;*/
-/*    padding:5px;*/
-/*}*/
-/**/
-/*.dia .minicursos {*/
-/*    width: 45%;*/
-/*    border: 1px solid #da2827;*/
-/*    padding:5px;*/
-/*    position: relative;*/
-/*    left: 50%;*/
-/*    top: auto;*/
-/*}*/
+.palestras {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 400px;
+    width: 450px !important;
+    border-right: 1px solid #da2827;
+}
+
+.minicursos {
+    margin-top: 7px !important;
+    margin-right: 5px !important;
+    margin: 0pt;
+    position: absolute;
+    right: 0pt;
+    top: 37pt;
+    width: 450px;
+    z-index:0;
+}
+
+.minicursos_subtitulo, .palestras_subtitulo {
+    border-bottom: 1px  dotted #669933;
+    border-left: 1px  solid #669933;
+    margin-right: 5px;
+    padding-left:5px
+}
+
+.palestras_subtitulo {
+    background-color: #da2827;
+    color: #ffffff;
+}
+
+.minicursos_subtitulo {
+    background-color: #669933;
+    color: #ffffff;
+}
+
+.minievento{
+    padding-left:5px;
+    padding-top: 5px;
+    margin-bottom: 15px;
+    border-bottom: 1px dotted #669933;
+    border-left: 1px solid #669933;
+}
+
+.minievento_atributo {
+    color: #669933;
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+.minievento_atributo .label{
+    color: #da2827;
+}
+
+.minievento_atributo a{
+    color:#da2827;
+}

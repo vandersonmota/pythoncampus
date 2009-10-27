@@ -3,7 +3,14 @@
 {% block conteudo %}
     <div class="titulo_pagina">Programação</div>
     <div class="dia">
+        <div class="cabecalho_lista_minieventos">
+            Dia 27/11
+        </div>
+        
         <div class="palestras">
+            <div class="palestras_subtitulo">
+                Palestras
+            </div>
             {% for palestra in palestras_dia_27 %}
                 <div class="minievento">
                     <div class="minievento_atributo">
@@ -28,6 +35,9 @@
             {% endfor %}
         </div>
         <div class="minicursos">
+            <div class="minicursos_subtitulo">
+                Minicursos
+            </div>
             {% for minicurso in minicursos_dia_27 %}
                 <div class="minievento">
                     <div class="minievento_atributo">
@@ -55,53 +65,67 @@
             {% endfor %}
         </div>
     </div>
+    
     <div class="dia">
-        {% for palestra in palestras_dia_28 %}
-            <div class="minievento">
-                <div class="minievento_atributo">
-                    <span class="label">Horário:</span>{{ palestra.horario|time:"H:i"}}
-                </div>
-                <div class="minievento_atributo">
-                    <span class="label">Título:</span>{{ palestra.nome }}
-                </div>
-                <div class="minievento_atributo">
-                    <span class="label">Descrição: </span>{{ palestra.descricao|linebreaksbr }}
-                </div>
-                <div class="minievento_atributo">
-                    <span class="label">Público-alvo:</span>{{ palestra.publico_alvo}}
-                </div>
-                <div class="minievento_atributo">
-                    <span class="label">Ministrante:
-                    <a class="info_ministrante" href="/ministrante/{{palestra.palestrante.id}}">
-                      {{ palestra.palestrante}}
-                    </a>
-                </div>
+        <div class="cabecalho_lista_minieventos">
+            Dia 28/11
+        </div>
+        <div class="palestras">
+            <div class="palestras_subtitulo">
+                Palestras
             </div>
-        {% endfor %}
-        {% for minicurso in minicursos_dia_28 %}
-            <div class="minievento">
-                <div class="minievento_atributo">
-                    <span class="label">Horário:</span>{{ minicurso.horario|time:"H:i"}}
+            {% for palestra in palestras_dia_28 %}
+                <div class="minievento">
+                    <div class="minievento_atributo">
+                        <span class="label">Horário:</span>{{ palestra.horario|time:"H:i"}}
+                    </div>
+                    <div class="minievento_atributo">
+                        <span class="label">Título:</span>{{ palestra.nome }}
+                    </div>
+                    <div class="minievento_atributo">
+                        <span class="label">Descrição: </span>{{ palestra.descricao|linebreaksbr }}
+                    </div>
+                    <div class="minievento_atributo">
+                        <span class="label">Público-alvo:</span>{{ palestra.publico_alvo}}
+                    </div>
+                    <div class="minievento_atributo">
+                        <span class="label">Ministrante:
+                        <a class="info_ministrante" href="/ministrante/{{palestra.palestrante.id}}">
+                          {{ palestra.palestrante}}
+                        </a>
+                    </div>
                 </div>
-                <div class="minievento_atributo">
-                    <span class="label">Título:</span>{{ minicurso.nome }}
-                </div>
-                <div class="minievento_atributo">
-                    <span class="label">Descrição: </span>{{ minicurso.descricao|linebreaksbr }}
-                </div>
-                <div class="minievento_atributo">
-                    <span class="label">Público-alvo:</span>{{ minicurso.publico_alvo}}
-                </div>
-                <div class="minievento_atributo">
-                    <span class="label">Ministrante:
-                    <a class="info_ministrante" href="/ministrante/{{minicurso.ministrante.id}}">
-                      {{ minicurso.ministrante}}
-                    </a>
-                </div>
-                <div class="minievento_atributo">
-                    <span class="label">Vagas Disponíveis:</span>{{ minicurso.vagas_disponiveis}}
-                </div>
+            {% endfor %}
+        </div>
+        <div class="minicursos">
+            <div class="minicursos_subtitulo">
+                Minicursos
             </div>
-        {% endfor %}
+            {% for minicurso in minicursos_dia_28 %}
+                <div class="minievento">
+                    <div class="minievento_atributo">
+                        <span class="label">Horário:</span>{{ minicurso.horario|time:"H:i"}}
+                    </div>
+                    <div class="minievento_atributo">
+                        <span class="label">Título:</span>{{ minicurso.nome }}
+                    </div>
+                    <div class="minievento_atributo">
+                        <span class="label">Descrição: </span>{{ minicurso.descricao|linebreaksbr }}
+                    </div>
+                    <div class="minievento_atributo">
+                        <span class="label">Público-alvo:</span>{{ minicurso.publico_alvo}}
+                    </div>
+                    <div class="minievento_atributo">
+                        <span class="label">Ministrante:
+                        <a class="info_ministrante" href="/ministrante/{{minicurso.ministrante.id}}">
+                          {{ minicurso.ministrante}}
+                        </a>
+                    </div>
+                    <div class="minievento_atributo">
+                        <span class="label">Vagas Disponíveis:</span>{{ minicurso.vagas_disponiveis}}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 {% endblock conteudo %}
