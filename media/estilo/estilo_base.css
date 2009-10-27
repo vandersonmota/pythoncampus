@@ -128,6 +128,10 @@ body {
     /*border-bottom:1px solid #eeeeee;*/
 }
 
+.imagem_principal {
+    border-right: 1px dotted #da2827;
+}
+
 .rodape {
     background-color: #669933;
     color: #ffffff;
@@ -161,6 +165,7 @@ body {
 
 /* fim estilo formulario inscrição */
 
+/* estilo programação */
 .informacoes_minicursos {
     padding: 5px;
 }
@@ -240,4 +245,34 @@ body {
 
 .minievento_atributo a{
     color:#669933;
+}
+
+/* fim estilo programação */
+
+/* estio pagina equipe */
+
+.equipe {
+    padding-left: 5px;
+    z-index:0;
+}
+
+.funcao {
+    border-left: 1px solid #669933;
+    border-right: 1px solid #669933;
+    border-bottom: 1px solid #669933;
+    margin-bottom: 4px;
+    margin-right:5px;
+}
+
+.funcao_titulo {
+    border-top: 1px solid #669933;
+    background-color: #669933;
+    color: #ffffff;
+    padding-left: 2px;
+    /*margin-right:2px;*/
+}
+
+.membro {
+    border-top: 1px solid #669933;
+    padding: 2px;
 }
