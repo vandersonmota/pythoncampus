@@ -2,7 +2,6 @@
 
 {% block conteudo %}
     <div class="titulo_pagina">Informações Cadastrais</div>
-    <div class="subtitulo_pagina">Todos os campos são obrigatórios, exceto minicurso.</div>
     <div class="formulario_div">
         <form action="" method="post">
             {% for field in form %}
@@ -12,10 +11,11 @@
                     <span class="campo_erro">{{ field.errors }}</span>
                 </div>
             {% endfor %}
+            <div class="subtitulo_pagina">Selecione apenas os minicursos que você realmente deseja participar!</div>
             <input type="submit" value=' Confirmar Inscrição '/>        
         </form>
     </div>
     <div class="informacoes_minicursos">
-        Para informações acerca dos minicursos clique <a target='_blank' href='/minicursos'>aqui</a>.
+        Para informações acerca dos minicursos clique <a target='_blank' href='/programacao'>aqui</a>.
     </div>
 {% endblock conteudo %}

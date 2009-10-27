@@ -16,7 +16,7 @@ body {
 .corpo {
     background-color: white;
     display         : block;
-    height          : 100%;
+    /*height          : 100%;*/
     left            : 45%;
     margin-left     : -380px;
     position        : absolute;
@@ -31,10 +31,13 @@ body {
     position        : fixed;
     width           : 923px;
     background-color: white;
-    z-index:1;
+    z-index:4;
 }
 
 .logo {
+    background : transparent url('/media/imagens/pythoncampusNSI.png') no-repeat;
+    width: 400px;
+    height: 117px;
     position   : absolute;
     left       : 50%;
     top        : 0;
@@ -96,10 +99,16 @@ body {
 }
 
 .cantoD {
+    background: transparent url("/media/imagens/cantoD.png") no-repeat;
+    width: 33px;
+    height: 32px;
     right: -32px;
 }
 
 .cantoE {
+    background: transparent url("/media/imagens/cantoE.png") no-repeat;
+    width: 33px;
+    height: 32px;
     left: -32px;
 }
 
@@ -125,6 +134,12 @@ body {
     padding:5px;
     text-align:center;
     clear:left;
+}
+
+.imagem_principal {
+    background: #ffffff url("/media/imagens/garotapythoncampus.png") no-repeat;
+    width: 335px;
+    height: 449px;
 }
 
 /* fim do estilo base */
@@ -170,7 +185,7 @@ body {
     width: 100%;
     min-height: 250px;
     position: relative;
-    height: auto !important;
+    height: 100% !important;
     /*border-bottom: 1px solid #da2827;*/
     background-color: white;
     z-index:0;
@@ -187,11 +202,11 @@ body {
 .minicursos {
     margin-top: 7px !important;
     margin-right: 5px !important;
-    margin: 0pt;
+    margin-left: 410px !important;
     position: absolute;
     right: 0pt;
     top: 37pt;
-    width: 450px;
+    width: 450px !important;
     z-index:0;
 }
 
@@ -199,15 +214,7 @@ body {
     border-bottom: 1px  dotted #669933;
     border-left: 1px  solid #669933;
     margin-right: 5px;
-    padding-left:5px
-}
-
-.palestras_subtitulo {
-    background-color: #da2827;
-    color: #ffffff;
-}
-
-.minicursos_subtitulo {
+    padding-left:5px;
     background-color: #669933;
     color: #ffffff;
 }
@@ -218,18 +225,19 @@ body {
     margin-bottom: 15px;
     border-bottom: 1px dotted #669933;
     border-left: 1px solid #669933;
+    z-index:3;
 }
 
 .minievento_atributo {
-    color: #669933;
+    color: #000000;
     font-size: 11pt;
-    font-weight: bold;
 }
 
 .minievento_atributo .label{
-    color: #da2827;
+    /*color: #669933;*/
+    font-weight: bold;
 }
 
 .minievento_atributo a{
-    color:#da2827;
+    color:#669933;
 }

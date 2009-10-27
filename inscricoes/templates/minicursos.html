@@ -1,21 +1,21 @@
 {% extends "pagina_base.html" %}
 
 {% block conteudo %}
-    <div class="page_title">Minicursos</div>
-    <div class="eventos_div">
-        {% for minicurso in object_list%}
+    <div class="titulo_pagina">Minicursos Oferecidos</div>
+    <div class="dia">
+        <div class="cabecalho_lista_minieventos">
+            Dia 27/11
+        </div>
+        {% for minicurso in minicursos_dia_27 %}
             <div class="minievento">
                 <div class="minievento_atributo">
-                    <span class="label">Horário:</span>{{ minicurso.horario|time:"H:i"}}
+                    <span class="label">Horário: </span>{{ minicurso.horario|time:"H:i"}}
                 </div>
                 <div class="minievento_atributo">
-                    <span class="label">Título:</span>{{ minicurso.nome }}
+                    <span class="label">Título: </span>{{ minicurso.nome }}
                 </div>
                 <div class="minievento_atributo">
                     <span class="label">Descrição: </span>{{ minicurso.descricao|linebreaksbr }}
-                </div>
-                <div class="minievento_atributo">
-                    <span class="label">Público-alvo:</span>{{ minicurso.publico_alvo}}
                 </div>
                 <div class="minievento_atributo">
                     <span class="label">Ministrante:
@@ -24,9 +24,43 @@
                     </a>
                 </div>
                 <div class="minievento_atributo">
-                    <span class="label">Vagas Disponíveis:</span>{{ minicurso.vagas_disponiveis}}
+                    <span class="label">Público-alvo: </span>{{ minicurso.publico_alvo}}
+                </div>
+                <div class="minievento_atributo">
+                    <span class="label">Vagas Disponíveis: </span>{{ minicurso.vagas_disponiveis}}
                 </div>
             </div>
-        {% endfor %}    
+        {% endfor %}
+    </div>
+    
+    <div class="dia">
+        <div class="cabecalho_lista_minieventos">
+            Dia 28/11
+        </div>
+        {% for minicurso in minicursos_dia_28 %}
+            <div class="minievento">
+                <div class="minievento_atributo">
+                    <span class="label">Horário: </span>{{ minicurso.horario|time:"H:i"}}
+                </div>
+                <div class="minievento_atributo">
+                    <span class="label">Título: </span>{{ minicurso.nome }}
+                </div>
+                <div class="minievento_atributo">
+                    <span class="label">Descrição: </span>{{ minicurso.descricao|linebreaksbr }}
+                </div>
+                <div class="minievento_atributo">
+                    <span class="label">Ministrante:
+                    <a class="info_ministrante" href="/ministrante/{{minicurso.ministrante.id}}">
+                      {{ minicurso.ministrante}}
+                    </a>
+                </div>
+                <div class="minievento_atributo">
+                    <span class="label">Público-alvo: </span>{{ minicurso.publico_alvo}}
+                </div>
+                <div class="minievento_atributo">
+                    <span class="label">Vagas Disponíveis: </span>{{ minicurso.vagas_disponiveis}}
+                </div>
+            </div>
+        {% endfor %}
     </div>
 {% endblock conteudo %}

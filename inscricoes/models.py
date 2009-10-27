@@ -35,7 +35,8 @@ class MiniCurso(MiniEvento):
         else:
             participante.estado = 'espera'
             
-        self.inscrito_set.add(participante)    
+        self.inscrito_set.add(participante)
+        self.save()
 
 class Inscrito(models.Model):
     ESTADOS = (('pendente', 'Pendente'),
@@ -54,8 +55,6 @@ class Inscrito(models.Model):
     def inscrever(self, minicurso):
         minicurso.registrar_participante(self)
         self.minicurso.add(minicurso)
-        
-        
 
 
 class Ministrante(models.Model):
