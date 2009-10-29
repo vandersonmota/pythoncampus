@@ -1,8 +1,23 @@
 {% extends "pagina_base.html" %}
 
 {% block conteudo %}
-        Nome : {{ object.nome }}<br/>
-        <img src="{{ MEDIA_URL}}{{ object.foto }}"><br/>
-        Quem é : {{ object.descricao|linebreaksbr }}<br/>
-        Site/Blog : <a href="{{ object.site }}">{{ object.site }}</a>
+    <div class="div_principal_ministrante">
+        <div class="ministrante">
+            <div class="ministrante_titulo">Detalhes do Ministrante</div>
+            <div class="ministrante_foto">
+                <img src="{{ MEDIA_URL}}{{ object.foto }}">
+            </div>
+            <div class="ministrante_infos">
+                <div class="nome_ministrante">{{ object.nome }}</div>
+                <div class="detalhe_ministrante">
+                    {{ object.descricao|linebreaksbr }}
+                </div>
+                <div class="detalhe_ministrante">
+                    <span class="detalhe_ministrante_label">Site/Blog:</span>
+                    <a href="{{ object.site }}">{{ object.site }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock conteudo %}
+

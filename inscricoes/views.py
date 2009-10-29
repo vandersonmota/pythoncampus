@@ -3,36 +3,17 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.views.generic.create_update import create_object
 from django.http import HttpResponseRedirect
+from django.db import IntegrityError
 from models import Palestra, Inscrito, MiniCurso
 from forms import FormularioInscrito
 
 minicursos_dia_27 = MiniCurso.objects.filter(data__day=27).order_by('horario')
 minicursos_dia_28 = MiniCurso.objects.filter(data__day=28).order_by('horario')
 
-def inscricao_base_view(request):
-    return render_to_response(
-        'index.html',
-        context_instance=RequestContext(request)
-    )
-    
-def inscricao(request):
-    if request.method == 'POST':
-        formulario_inscrito = FormularioInscrito(request.POST)
-        if formulario_inscrito.is_valid():
-            inscrito = formulario_inscrito.save()
-            return HttpResponseRedirect("/")
-    else:
-        formulario_inscrito = FormularioInscrito()
-        return render_to_response(
-            'inscricao.html',
-            {'form':formulario_inscrito},
-            context_instance=RequestContext(request)
-        )
-    
 def programacao(request):
     palestras_dia_27 = Palestra.objects.filter(data__day=27).order_by('horario')
     palestras_dia_28 = Palestra.objects.filter(data__day=28).order_by('horario')
-    
+
     return render_to_response(
         'programacao.html',
         {
@@ -43,7 +24,7 @@ def programacao(request):
         },
         context_instance=RequestContext(request)
     )
-    
+
 def minicursos(request):
     return render_to_response(
         'minicursos.html',
@@ -53,3 +34,4 @@ def minicursos(request):
         },
         context_instance=RequestContext(request)
     )
+

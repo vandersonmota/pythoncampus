@@ -6,16 +6,20 @@
         <form action="" method="post">
             {% for field in form %}
                 <div class="campo_div">
-                    <span class="campo_label">{{ field.label_tag }}:</span>
-                    <span class="campo">{{ field }}</span>
-                    <span class="campo_erro">{{ field.errors }}</span>
+                    <fieldset>
+                        <legend>{{ field.label_tag }}:</legend>
+                        <div class="campo">{{ field }}</div>
+                        <div class="campo_erro">{{ field.errors }}</div>
+                    </fieldset>
                 </div>
             {% endfor %}
             <div class="subtitulo_pagina">Selecione apenas os minicursos que você realmente deseja participar!</div>
-            <input type="submit" value=' Confirmar Inscrição '/>        
+            <div class="campo">
+                <input type="submit" value=" Confirmar inscrição " />
+            </div>
         </form>
     </div>
     <div class="informacoes_minicursos">
-        Para informações acerca dos minicursos clique <a target='_blank' href='/programacao'>aqui</a>.
+        Para informações acerca dos minicursos acesse a página da <a href="/programacao">programação</a>.
     </div>
 {% endblock conteudo %}

@@ -3,19 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
     <head>
         <title>..:: PythOnCampus IFF ::..</title>
-        {% block estilo %}
-            <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL}}estilo/estilo_base.css"/>
-        {% endblock estilo %}
+        <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL}}estilo/estilo_base.css"/>
     </head>
     <body>
         <div class="corpo">
             <div class="topo">
                 <div class="logo">&nbsp;</div>
-                <!--<img class="logo" src="{{ MEDIA_URL }}imagens/pythoncampusNSI.png" />-->
                 <ul class="navegacao">
                     <li>
                         <a href="/">Página Inicial</a>
-                    </li>                    
+                    </li>
                     <li>
                         <a href="/programacao">Programação</a>
                     </li>
@@ -37,12 +34,25 @@
             </div>
             <div class="conteudo">
                 {% block conteudo %}
-                
+
                 {% endblock conteudo %}
             </div>
             <div class="rodape">
                 NSI - IF Fluminense - Núcle de Pesquisa em Sistemas de Informação
+                <div class="selos">
+                    <a href="http://www.djangoproject.com/">
+                        <img src="http://media.djangoproject.com/img/badges/djangopowered126x54.gif" style="border:0;width:88px;height:31px"  alt="Powered by Django." title="Powered by Django." /></a>
+                    <a href="http://validator.w3.org/check?uri=referer">
+                        <img src="http://www.w3.org/Icons/valid-xhtml10-blue"
+                         alt="Valid XHTML 1.0 Strict" style="border:0;width:88px;height:31px" />
+                    </a>
+                    <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                        <img style="border:0;width:88px;height:31px"
+                        src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
+                    </a>
+                </div>
             </div>
-        <div>
+        </div>
     </body>
 </html>
+

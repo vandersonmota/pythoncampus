@@ -4,7 +4,7 @@ body {
     margin               : 0;
     background           : #585757 url(/media/imagens/bgGrad.gif) repeat-x scroll 0 0;
     background-attachment: fixed;
-    
+
 }
 .conteudo {
     display         : block;
@@ -17,7 +17,7 @@ body {
     background-color: white;
     display         : block;
     /*height          : 100%;*/
-    left            : 45%;
+    left            : 43%;
     margin-left     : -380px;
     position        : absolute;
     width           : 923px;
@@ -26,7 +26,7 @@ body {
 .topo {
     display         : block;
     height          : 150px;
-    left            : 45%;
+    left            : 43%;
     margin-left     : -380px;
     position        : fixed;
     width           : 923px;
@@ -146,6 +146,11 @@ body {
     height: 449px;
 }
 
+.selos {
+    padding-top:5px;
+    text-align: center;
+}
+
 /* fim do estilo base */
 
 /* estilo formulario inscrição */
@@ -156,6 +161,10 @@ body {
 
 .campo_div {
     padding:3px;
+}
+
+.campo {
+    
 }
 
 .campo_erro {
@@ -276,3 +285,65 @@ body {
     border-top: 1px solid #669933;
     padding: 2px;
 }
+
+/* fim estio equipe */
+
+/* estilo ministrante */
+
+.div_principal_ministrante {
+        padding-top: 30px;
+}
+
+.ministrante {
+    border-left: 1px solid #669933;
+    border-right: 1px solid #669933;
+    border-bottom: 1px solid #669933;
+    margin-bottom: 4px;
+    margin-right:5px;
+    margin-left: 5px;
+    float: left;
+    position: relative;
+}
+
+.ministrante_titulo {
+    border-top: 1px solid #669933;
+    background-color: #669933;
+    color: #ffffff;
+    padding-left: 2px;
+}
+
+.ministrante_foto {
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 25%;
+    height: 25%;
+}
+.ministrante_foto img {
+    margin-right: 25%;
+    width: 80%;
+    height: 80%;
+}
+
+.ministrante_infos {
+    margin-left: 26%;
+    position:absolute;
+    top: 20px;
+    left:auto;
+    width: 100%;
+    margin-right: 0pt;
+}
+.nome_ministrante {
+    font-size: xx-large;
+    padding-left: 5px;
+    text-decoration: underline;
+}
+
+.detalhe_ministrante {
+    padding-left: 5px;
+}
+
+.detalhe_ministrante a {
+    text-decoration: none;
+    color:#669933;
+}
+

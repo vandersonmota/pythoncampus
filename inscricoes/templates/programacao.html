@@ -6,7 +6,7 @@
         <div class="cabecalho_lista_minieventos">
             Dia 27/11
         </div>
-        
+
         <div class="palestras">
             <div class="palestras_subtitulo">
                 Palestras
@@ -23,7 +23,7 @@
                         <span class="label">Descrição: </span>{{ palestra.descricao|linebreaksbr }}
                     </div>
                     <div class="minievento_atributo">
-                        <span class="label">Ministrante:
+                        <span class="label">Ministrante:</span>
                         <a class="info_ministrante" href="/ministrante/{{palestra.palestrante.id}}">
                           {{ palestra.palestrante}}
                         </a>
@@ -50,7 +50,7 @@
                         <span class="label">Descrição: </span>{{ minicurso.descricao|linebreaksbr }}
                     </div>
                     <div class="minievento_atributo">
-                        <span class="label">Ministrante:
+                        <span class="label">Ministrante:</span>
                         <a class="info_ministrante" href="/ministrante/{{minicurso.ministrante.id}}">
                           {{ minicurso.ministrante}}
                         </a>
@@ -65,7 +65,7 @@
             {% endfor %}
         </div>
     </div>
-    
+
     <div class="dia">
         <div class="cabecalho_lista_minieventos">
             Dia 28/11
@@ -86,7 +86,7 @@
                         <span class="label">Descrição: </span>{{ palestra.descricao|linebreaksbr }}
                     </div>
                     <div class="minievento_atributo">
-                        <span class="label">Ministrante:
+                        <span class="label">Ministrante:</span>
                         <a class="info_ministrante" href="/ministrante/{{palestra.palestrante.id}}">
                           {{ palestra.palestrante}}
                         </a>
@@ -113,7 +113,7 @@
                         <span class="label">Descrição: </span>{{ minicurso.descricao|linebreaksbr }}
                     </div>
                     <div class="minievento_atributo">
-                        <span class="label">Ministrante:
+                        <span class="label">Ministrante:</span>
                         <a class="info_ministrante" href="/ministrante/{{minicurso.ministrante.id}}">
                           {{ minicurso.ministrante}}
                         </a>
@@ -129,3 +129,4 @@
         </div>
     </div>
 {% endblock conteudo %}
+

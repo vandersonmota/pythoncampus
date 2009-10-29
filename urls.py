@@ -8,6 +8,13 @@ from django.contrib import admin
 admin.autodiscover()
 
 object_detail = 'django.views.generic.list_detail.object_detail'
+create_object = 'django.views.generic.create_update.create_object'
+
+propriedades_inscricao = {
+    'form_class': FormularioInscrito,
+    'template_name': 'inscricao.html',
+    'post_save_redirect': '/',
+    }
 
 propriedades_ministrante = {
     'queryset': Ministrante.objects.all(),
@@ -17,8 +24,8 @@ propriedades_ministrante = {
 urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
     (r'^$','views.index'),
-    (r'^inscricao/','inscricoes.views.inscricao'),
     (r'^programacao/', 'inscricoes.views.programacao'),
+    (r'^inscricao', create_object, propriedades_inscricao),
     #(r'^minicursos/', 'inscricoes.views.minicursos'),
     (r'^equipe','django.views.generic.simple.direct_to_template',{'template':'equipe.html'}),
     (r'^ministrante/(?P<object_id>\d+)', object_detail, propriedades_ministrante),
@@ -26,3 +33,4 @@ urlpatterns = patterns('',
         {'document_root': settings.MEDIA_ROOT}
     ),
 )
+
