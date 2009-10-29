@@ -138,6 +138,7 @@ body {
     padding:5px;
     text-align:center;
     clear:left;
+    font-size: small;
 }
 
 .imagem_principal {
@@ -149,6 +150,12 @@ body {
 .selos {
     padding-top:5px;
     text-align: center;
+}
+
+.links a{
+    text-decoration:none;
+    color:#ffffff;
+    font-size: small;
 }
 
 /* fim do estilo base */

@@ -45,8 +45,8 @@ class Inscrito(models.Model):
     
     nome = models.CharField('Nome',max_length=100)
     instituicao = models.CharField('Instituição',max_length=100)
-    cpf = models.CharField('CPF',max_length=14,unique=True)
-    minicurso = models.ManyToManyField('MiniCurso', blank=True, null=True)
+    cpf = models.CharField('CPF',max_length=11,unique=True)
+    minicurso = models.ManyToManyField('MiniCurso', null=True, blank=True)
     estado = models.CharField(max_length=20, choices=ESTADOS, default='pendente')
     
     def __unicode__(self):

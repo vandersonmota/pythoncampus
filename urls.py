@@ -13,7 +13,7 @@ create_object = 'django.views.generic.create_update.create_object'
 propriedades_inscricao = {
     'form_class': FormularioInscrito,
     'template_name': 'inscricao.html',
-    'post_save_redirect': '/',
+    'post_save_redirect': '/sucesso_inscricao',
     }
 
 propriedades_ministrante = {
@@ -24,11 +24,16 @@ propriedades_ministrante = {
 urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
     (r'^$','views.index'),
-    (r'^programacao/', 'inscricoes.views.programacao'),
-    (r'^inscricao', create_object, propriedades_inscricao),
+    (r'^programacao/$', 'inscricoes.views.programacao'),
+    (r'^inscricao/$', create_object, propriedades_inscricao),
     #(r'^minicursos/', 'inscricoes.views.minicursos'),
-    (r'^equipe','django.views.generic.simple.direct_to_template',{'template':'equipe.html'}),
-    (r'^ministrante/(?P<object_id>\d+)', object_detail, propriedades_ministrante),
+    (r'^equipe/$',
+        'django.views.generic.simple.direct_to_template',
+        {'template':'equipe.html'}),
+    (r'^sucesso_inscricao/$',
+        'django.views.generic.simple.direct_to_template',
+        {'template':'sucesso_inscricao.html'}),
+    (r'^ministrante/(?P<object_id>\d+)$', object_detail, propriedades_ministrante),
     (r'^media/(.*)$', 'django.views.static.serve',
         {'document_root': settings.MEDIA_ROOT}
     ),

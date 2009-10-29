@@ -6,7 +6,8 @@ class FormularioInscrito(forms.ModelForm):
     cpf = BRCPFField(label='CPF')
     minicurso = forms.ModelMultipleChoiceField(
         queryset=MiniCurso.objects.all(),
-        widget = forms.widgets.CheckboxSelectMultiple)
+        widget = forms.widgets.CheckboxSelectMultiple,
+        required = False)
 
     class Meta:
         model = Inscrito
