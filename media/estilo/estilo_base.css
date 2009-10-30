@@ -4,46 +4,59 @@ body {
     margin               : 0;
     background           : #585757 url(/media/imagens/bgGrad.gif) repeat-x scroll 0 0;
     background-attachment: fixed;
-
 }
 .conteudo {
     display         : block;
     background-color: white;
     margin-top      : 150px;
-    /*height: 100% !important;*/
+    height: 100%;
 }
 
 .corpo {
     background-color: white;
     display         : block;
-    /*height          : 100%;*/
-    left            : 43%;
+    height          : auto;
+    left            : 50%;
     margin-left     : -380px;
     position        : absolute;
-    width           : 923px;
+    width           : 760px;
 }
 
 .topo {
     display         : block;
-    height          : 150px;
-    left            : 43%;
-    margin-left     : -380px;
+    height          : 140px;
+    left            : 50%;
+    margin-left     : -381px;
     position        : fixed;
-    width           : 923px;
+    width           : 760px;
     background-color: white;
     z-index:4;
 }
 
 .logo {
-    background : transparent url('/media/imagens/pythoncampusNSI.png') no-repeat;
+    background : url('/media/imagens/pythoncampusNSI.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
     width: 400px;
-    height: 117px;
+    height: 110px;
     position   : absolute;
     left       : 50%;
-    top        : 0;
+    top        : 0px;
     margin-left: -200px;
     z-index    : 5;
 }
+
+/* Fix IE.*/
+* html .navegacao {
+    top: 65px;
+}
+
+* html .topo {
+    background-color: transparent;
+    position        : fixed;
+    height: auto;
+}
+/* end */
 
 .navegacao {
     background-color   : #669933;
@@ -54,12 +67,12 @@ body {
     list-style-image   : none;
     list-style-position: outside;
     list-style-type    : none;
-    margin-left        : -495px;
-    padding            : 0;
+    margin-left        : -409px;
+    padding            : 0px;
     position           : absolute;
     top                : 50px;
     white-space        : nowrap;
-    width              : 987px;
+    width              : 818px;
     z-index            : 2;
     border-right       : 1px solid white;
 }
@@ -69,7 +82,7 @@ body {
     display         : block;
     float           : left;
     height          : 80px;
-    width           : 163px;
+    width           : 135px;
     border-left     : 1px solid white;
 }
 
@@ -77,17 +90,20 @@ body {
     color          : white;
     display        : block;
     height         : 80px;
-    left           : 0;
+    left           : 0px;
+    top            : 0px;
     line-height    : 120px;
     position       : relative;
     text-align     : center;
     text-decoration: none;
-    width          : 163px;
+    width          : 135px;
     font-variant   : small-caps;
     font-weight    : bold;
+    overflow: hidden;
 }
 .navegacao li:hover {
     background-image: url(/media/imagens/bgmenu_ativo.png);
+    background-color: #669933;
 }
 
 .cantoD , .cantoE {
@@ -99,17 +115,26 @@ body {
 }
 
 .cantoD {
-    background: transparent url("/media/imagens/cantoD.png") no-repeat;
-    width: 33px;
+    background-image: url("/media/imagens/cantoD.png");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 29px;
     height: 32px;
-    right: -32px;
+    right: -30px;
+    top: 142px !important;
+}
+
+* html .cantoD {
+    right: -29px;
 }
 
 .cantoE {
-    background: transparent url("/media/imagens/cantoE.png") no-repeat;
-    width: 33px;
+    background-image: url("/media/imagens/cantoE.png");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 30px;
     height: 32px;
-    left: -32px;
+    left: -29px;
 }
 
 .titulo_pagina {
@@ -129,7 +154,14 @@ body {
 }
 
 .imagem_principal {
-    border-right: 1px dotted #da2827;
+    /*border-top: 1px solid #669933;*/
+    /*border-right: 1px solid #669933;*/
+    background-color: #ffffff;
+    background-image: url("/media/imagens/garotapythoncampus.png");
+    background-repeat: no-repeat;
+    width: 335px;
+    height: 449px;
+    float:left;
 }
 
 .rodape {
@@ -139,12 +171,6 @@ body {
     text-align:center;
     clear:left;
     font-size: small;
-}
-
-.imagem_principal {
-    background: #ffffff url("/media/imagens/garotapythoncampus.png") no-repeat;
-    width: 335px;
-    height: 449px;
 }
 
 .selos {
@@ -159,6 +185,17 @@ body {
 }
 
 /* fim do estilo base */
+
+.texto_pagina_principal {
+    border-left: 1px solid #669933;
+    margin-left: 335px;
+}
+
+.texto_pagina_principal .texto {
+    padding-left: 7px;
+    /*padding-top: 20px;*/
+}
+
 
 /* estilo formulario inscrição */
 
@@ -187,8 +224,11 @@ body {
 }
 
 .cabecalho_lista_minieventos {
-    background: #ffffff url(/media/imagens/minievento_background.png) no-repeat;
+    background-image: url(/media/imagens/minievento_background.png);
+    background-color: #ffffff;
+    background-repeat: no-repeat;
     margin-left: 2px;
+    margin-right: 5px;
     padding-top:15px;
     padding-left:10px;
     font-size: x-large;
@@ -202,9 +242,8 @@ body {
 }
 
 .dia {
-    float: left;
     width: 100%;
-    min-height: 250px;
+    min-height: 200px;
     position: relative;
     height: 100% !important;
     /*border-bottom: 1px solid #da2827;*/
@@ -215,35 +254,41 @@ body {
 .palestras {
     margin-top: 5px;
     margin-left: 10px;
-    margin-right: 400px;
-    width: 450px !important;
+    margin-right: 360px;
+    width: 370px !important;
     border-right: 1px solid #da2827;
 }
 
 .minicursos {
     margin-top: 7px !important;
     margin-right: 5px !important;
-    margin-left: 410px !important;
+    margin-left: 370px !important;
     position: absolute;
     right: 0pt;
     top: 37pt;
-    width: 450px !important;
+    width: 370px !important;
     z-index:0;
+    float: left;
 }
 
 .minicursos_subtitulo, .palestras_subtitulo {
     border-bottom: 1px  dotted #669933;
     border-left: 1px  solid #669933;
-    margin-right: 5px;
+    margin-right: 0px;
     padding-left:5px;
+    padding-top:2px;
     background-color: #669933;
     color: #ffffff;
+}
+
+.palestras_subtitulo {
+    margin-right: 5px !important;
 }
 
 .minievento{
     padding-left:5px;
     padding-top: 5px;
-    margin-bottom: 15px;
+    padding-bottom: 5px;
     border-bottom: 1px dotted #669933;
     border-left: 1px solid #669933;
     z-index:3;
@@ -298,7 +343,8 @@ body {
 /* estilo ministrante */
 
 .div_principal_ministrante {
-        padding-top: 30px;
+    padding-top: 30px;
+    height: auto;
 }
 
 .ministrante {
@@ -308,7 +354,6 @@ body {
     margin-bottom: 4px;
     margin-right:5px;
     margin-left: 5px;
-    float: left;
     position: relative;
 }
 
@@ -317,27 +362,29 @@ body {
     background-color: #669933;
     color: #ffffff;
     padding-left: 2px;
+    font-weight: bold;
 }
 
 .ministrante_foto {
     margin-top: 5px;
     margin-left: 5px;
     width: 25%;
-    height: 25%;
 }
 .ministrante_foto img {
-    margin-right: 25%;
-    width: 80%;
-    height: 80%;
+    width: 100px;
+    height: 120px;
 }
 
 .ministrante_infos {
-    margin-left: 26%;
+    margin-left: 120px;
+    margin-top: 5px;
+    padding-left: 10px;
+    min-height: 120px;
     position:absolute;
     top: 20px;
-    left:auto;
-    width: 100%;
     margin-right: 0pt;
+    float: left;
+    border-left: 1px solid #669933;
 }
 .nome_ministrante {
     font-size: xx-large;
@@ -353,4 +400,3 @@ body {
     text-decoration: none;
     color:#669933;
 }
-

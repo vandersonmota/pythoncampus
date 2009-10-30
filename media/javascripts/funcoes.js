@@ -1,33 +1,23 @@
-if (navigator.appName.indexOf('Microsoft') != -1)
+function mascara()
     {
-        clientNavigator = "IE";
+        v_obj=document.getElementById('id_cpf')
+        v_fun=soNumeros
+        setTimeout("execmascara()",1)
     }
-else
+
+function execmascara()
     {
-        clientNavigator = "Other";
+        v_obj.value=v_fun(v_obj.value)
     }
-    
-function bloquear_caracteres(evnt)
+
+function soNumeros(v)
     {
-        //Função que permite apenas a digitação de números
-        if (clientNavigator == "IE")
-            {
-                if (evnt.keyCode < 48 || evnt.keyCode > 57)
-                    {
-                        return false
-                    }
-            }
-        else
-            {
-                if ((evnt.charCode < 48 || evnt.charCode > 57) && evnt.keyCode == 0)
-                    {
-                        return false
-                    }
-            }
+        return v.replace(/\D/g,"")
     }
+
     
 function adicionar_padronizador_cpf()
     {
-        document.getElementById('id_cpf').onkeypress=bloquear_caracteres;
+        document.getElementById('id_cpf').onkeypress=mascara;
         document.getElementById('id_cpf').maxLength=11;
     }
