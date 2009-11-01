@@ -218,6 +218,23 @@ body {
 
 /* fim estilo formulario inscrição */
 
+/* Estilo página de sucesso inscrição */
+
+.sucesso_inscricao {
+    height: 380px;
+    padding-top: 20px;
+}
+
+.mensagem_sucesso {
+    padding-left: 7px;
+    font-size: xx-large;
+}
+
+.mensagem_agradecimento {
+    padding-left: 7px;
+    font-size: large;
+}
+
 /* estilo programação */
 .informacoes_minicursos {
     padding: 5px;
@@ -315,6 +332,7 @@ body {
 .equipe {
     padding-left: 5px;
     z-index:0;
+    min-height:400px;
 }
 
 .funcao {
@@ -344,7 +362,7 @@ body {
 
 .div_principal_ministrante {
     padding-top: 30px;
-    height: auto;
+    min-height: 370px;
 }
 
 .ministrante {

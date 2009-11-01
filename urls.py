@@ -13,7 +13,7 @@ create_object = 'django.views.generic.create_update.create_object'
 propriedades_inscricao = {
     'form_class': FormularioInscrito,
     'template_name': 'inscricao.html',
-    'post_save_redirect': '/sucesso_inscricao',
+    'post_save_redirect': '/sucesso_inscricao/',
     }
 
 propriedades_ministrante = {
@@ -30,6 +30,9 @@ urlpatterns = patterns('',
     (r'^equipe/$',
         'django.views.generic.simple.direct_to_template',
         {'template':'equipe.html'}),
+    (r'^equipe_site/$',
+        'django.views.generic.simple.direct_to_template',
+        {'template':'equipe_site.html'}),
     (r'^sucesso_inscricao/$',
         'django.views.generic.simple.direct_to_template',
         {'template':'sucesso_inscricao.html'}),
