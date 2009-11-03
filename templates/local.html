@@ -1,0 +1,30 @@
+{% extends "pagina_base.html" %}
+
+{% block scripts %}
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&language=pt-BR"></script>
+    <script type="text/javascript">
+        function initialize()
+            {
+                var myLatlng = new google.maps.LatLng(-21.761525, -41.336829);
+                var myOptions =
+                    {
+                        zoom: 14,
+                        center: myLatlng,
+                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                    }
+                var map = new google.maps.Map(document.getElementById("map_div"), myOptions);
+                var marker = new google.maps.Marker({position: myLatlng,map: map,title:"Hello World!"});
+                var infowindow = new google.maps.InfoWindow(
+                    {content: "IF Fluminense - Instituto Federal de Educação, Ciência e Tecnologia Fluminense - Campus Campos-Centro",
+                    maxWidth:400});
+                infowindow.open(map,marker);
+            }
+    </script>
+{% endblock scripts %}
+
+{% block conteudo %}
+    <div class="map_div" id="map_div"></div>
+    <script type="text/javascript">
+        initialize();
+    </script>
+{% endblock conteudo %}

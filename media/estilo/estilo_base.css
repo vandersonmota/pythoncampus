@@ -418,3 +418,12 @@ body {
     text-decoration: none;
     color:#669933;
 }
+
+/**/
+
+/* estilo da página local */
+.map_div {
+    width:500px;
+    height: 400px;
+    margin: 5px;
+}

@@ -36,6 +36,8 @@ urlpatterns = patterns('',
     (r'^sucesso_inscricao/$',
         'django.views.generic.simple.direct_to_template',
         {'template':'sucesso_inscricao.html'}),
+    (r'^local/$','django.views.generic.simple.direct_to_template',
+        {'template':'local.html'}),
     (r'^ministrante/(?P<object_id>\d+)$', object_detail, propriedades_ministrante),
     (r'^media/(.*)$', 'django.views.static.serve',
         {'document_root': settings.MEDIA_ROOT}
