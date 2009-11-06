@@ -1,7 +1,7 @@
 from django.conf.urls.defaults import *
 from django.conf import settings
-from inscricoes.models import Palestra, Ministrante, MiniCurso
-from inscricoes.forms import FormularioInscrito
+from pythoncampus.inscricoes.models import Palestra, Ministrante, MiniCurso
+from pythoncampus.inscricoes.forms import FormularioInscrito
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -23,7 +23,7 @@ propriedades_ministrante = {
 
 urlpatterns = patterns('',
     (r'^admin/', include(admin.site.urls)),
-    (r'^$','views.index'),
+    (r'^$','pythoncampus.views.index'),
     (r'^programacao/$', 'pythoncampus.inscricoes.views.programacao'),
     (r'^inscricao/$', create_object, propriedades_inscricao),
     #(r'^minicursos/', 'inscricoes.views.minicursos'),
