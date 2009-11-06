@@ -4,6 +4,7 @@ body {
     margin               : 0;
     background           : #585757 url(/media/imagens/bgGrad.gif) repeat-x scroll 0 0;
     background-attachment: fixed;
+    font-family: verdana;
 }
 .conteudo {
     display         : block;
@@ -138,10 +139,11 @@ body {
 }
 
 .titulo_pagina {
-    padding-left:7px;
+    margin-left: 7px;
+    margin-right: 7px;
     padding-top: 20px;
     font-size:xx-large;
-    /*border-bottom:1px solid #eeeeee;*/
+    border-bottom:1px solid #669933;
 }
 
 .subtitulo_pagina {
@@ -173,12 +175,7 @@ body {
     font-size: small;
 }
 
-.selos {
-    padding-top:5px;
-    text-align: center;
-}
-
-.links a{
+.links_rodape a{
     text-decoration:none;
     color:#ffffff;
     font-size: small;
@@ -187,13 +184,10 @@ body {
 /* fim do estilo base */
 
 .texto_pagina_principal {
-    border-left: 1px solid #669933;
+    /*border-left: 1px solid #669933;*/
     margin-left: 335px;
-}
-
-.texto_pagina_principal .texto {
     padding-left: 7px;
-    /*padding-top: 20px;*/
+    padding-top: 80px;
 }
 
 
@@ -235,6 +229,8 @@ body {
     font-size: large;
 }
 
+/* Fim estilo pagina de sucesso inscriçao*/
+
 /* estilo programação */
 .informacoes_minicursos {
     padding: 5px;
@@ -273,7 +269,7 @@ body {
     margin-left: 10px;
     margin-right: 360px;
     width: 370px !important;
-    border-right: 1px solid #da2827;
+    /*border-right: 1px solid #da2827;*/
 }
 
 .minicursos {
@@ -330,7 +326,8 @@ body {
 /* estio pagina equipe */
 
 .equipe {
-    padding-left: 5px;
+    margin-top: 5px;
+    padding-left: 7px;
     z-index:0;
     min-height:400px;
 }
@@ -340,7 +337,7 @@ body {
     border-right: 1px solid #669933;
     border-bottom: 1px solid #669933;
     margin-bottom: 4px;
-    margin-right:5px;
+    margin-right:7px;
 }
 
 .funcao_titulo {
@@ -370,8 +367,8 @@ body {
     border-right: 1px solid #669933;
     border-bottom: 1px solid #669933;
     margin-bottom: 4px;
-    margin-right:5px;
-    margin-left: 5px;
+    margin-right:7px;
+    margin-left: 7px;
     position: relative;
 }
 
@@ -402,7 +399,7 @@ body {
     top: 20px;
     margin-right: 0pt;
     float: left;
-    border-left: 1px solid #669933;
+    /*border-left: 1px solid #669933;*/
 }
 .nome_ministrante {
     font-size: xx-large;
@@ -419,7 +416,7 @@ body {
     color:#669933;
 }
 
-/**/
+/* Fim estilo palestrante*/
 
 /* estilo da página local */
 .map_div {
@@ -427,3 +424,21 @@ body {
     height: 400px;
     margin: 5px;
 }
+
+/* Fim estilo página local*/
+
+ /* Estilo página equipe site */
+ 
+ .titulo_pagina_equipe_site {
+    margin-left: 7px;
+    margin-right: 7px;
+    padding-top: 20px;
+    font-size:xx-large;
+    border-bottom:1px solid #669933;
+ }
+ 
+ .desenvolvedor {
+    margin-top: 2px;
+    padding-left: 7px;
+    font-size: large;
+ }

@@ -1,0 +1,25 @@
+{% extends "pagina_base.html" %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{{ MEDIA_URL }}javascripts/funcoes.js">
+    </script>
+{% endblock scripts %}
+{% block conteudo %}
+    <div class="titulo_pagina">Entre em Contato Conosco</div>
+    <div class="formulario_div">
+        <form action="" method="post">
+            {% for field in form %}
+                <div class="campo_div">
+                    <fieldset>
+                        <legend>{{ field.label_tag }}:</legend>
+                        <div class="campo">{{ field }}</div>
+                        <div class="campo_erro">{{ field.errors }}</div>
+                    </fieldset>
+                </div>
+            {% endfor %}
+            <div class="campo">
+                <input type="submit" value=" Enviar " />
+            </div>
+        </form>
+    </div>
+{% endblock conteudo %}

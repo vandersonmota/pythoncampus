@@ -87,3 +87,9 @@ INSTALLED_APPS = (
     'windmill',
 )
 
+EMAIL_HOST="yoda.iff.edu.br"
+EMAIL_PORT="25"
+EMAIL_HOST_USER=""
+EMAIL_HOST_PASSWORD=""
+EMAIL_USE_TLS=False
+
