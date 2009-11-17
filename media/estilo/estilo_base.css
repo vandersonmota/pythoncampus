@@ -34,6 +34,13 @@ body {
     z-index:4;
 }
 
+#asn-warning {
+    z-index:1000;
+    height: 60px;
+    font-size: medium !important;
+    color: #da2827 !important;
+}
+
 .logo {
     background : url('/media/imagens/sitelogop.png');
     background-repeat: no-repeat;
@@ -139,6 +146,7 @@ body {
 }
 
 .titulo_pagina {
+    _margin-top: 150px;
     margin-left: 7px;
     margin-right: 7px;
     padding-top: 20px;
@@ -159,6 +167,7 @@ body {
     /*border-top: 1px solid #669933;*/
     /*border-right: 1px solid #669933;*/
     margin-top: 30px;
+    _margin-top: 180px !important;
     background-color: #ffffff;
     background-image: url("/media/imagens/garotapythoncampus.png");
     background-repeat: no-repeat;
@@ -194,6 +203,7 @@ body {
 
 .texto_pagina_principal {
     /*border-left: 1px solid #669933;*/
+    _margin-top: 180px;
     margin-left: 335px;
     padding-left: 7px;
     padding-top: 80px;
