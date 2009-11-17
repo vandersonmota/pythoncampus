@@ -238,6 +238,12 @@ body {
     font-size: large;
 }
 
+.aviso {
+    padding-left: 7px;
+    font-size: large;
+    color: red;
+}
+
 /* Fim estilo pagina de sucesso inscriçao*/
 
 /* estilo programação */
