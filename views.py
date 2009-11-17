@@ -18,7 +18,7 @@ def contato(request):
           email = request.POST.get('email')
           assunto = request.POST.get('assunto')
           mensagem = request.POST.get('mensagem')
-          mail = EmailMessage(assunto,mensagem,email,['vinimaster@gmail.com'])
+          mail = EmailMessage(assunto,mensagem,email,['pythoncampus@iff.edu.br'])
           try:
             mail.send()
             return HttpResponseRedirect('/sucesso_contato/')

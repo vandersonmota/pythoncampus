@@ -13,7 +13,7 @@
                         mapTypeId: google.maps.MapTypeId.ROADMAP
                     }
                 var map = new google.maps.Map(document.getElementById("map_div"), myOptions);
-                var marker = new google.maps.Marker({position: myLatlng,map: map,title:"Hello World!"});
+                var marker = new google.maps.Marker({position: myLatlng,map: map,title:"IF Fluminense"});
                 var infowindow = new google.maps.InfoWindow(
                     {content: "IF Fluminense - Instituto Federal de Educação, Ciência e Tecnologia Fluminense - Campus Campos-Centro",
                     maxWidth:400});
@@ -23,6 +23,9 @@
 {% endblock scripts %}
 
 {% block conteudo %}
+    <div class="titulo_pagina">
+        Localização do IF Fluminense (Antigo CEFET-Campos)
+    </div>
     <div class="map_div" id="map_div"></div>
     <script type="text/javascript">
         initialize();

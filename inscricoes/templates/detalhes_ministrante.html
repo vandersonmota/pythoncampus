@@ -13,8 +13,10 @@
                     {{ object.descricao|linebreaksbr }}
                 </div>
                 <div class="detalhe_ministrante">
-                    <span class="detalhe_ministrante_label">Site/Blog:</span>
-                    <a href="{{ object.site }}">{{ object.site }}</a>
+                    {% if object.site %}
+                        <span class="detalhe_ministrante_label">Site/Blog:</span>
+                        <a href="{{ object.site }}">{{ object.site }}</a>
+                    {% endif %}
                 </div>
             </div>
         </div>

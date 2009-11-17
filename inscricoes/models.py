@@ -18,7 +18,7 @@ class MiniEvento(models.Model):
         return self.nome
 
 class Palestra(MiniEvento):
-    palestrante = models.ForeignKey('Ministrante',)
+    palestrante = models.ManyToManyField('Ministrante',)
 
 class MiniCurso(MiniEvento):
     ministrante = models.ForeignKey('Ministrante',)
@@ -60,7 +60,7 @@ class Inscrito(models.Model):
 class Ministrante(models.Model):
     nome = models.CharField('Nome',max_length=100)
     descricao = models.TextField('Quem é',max_length=500)
-    foto = models.ImageField(upload_to='imagens/ministrantes')
+    foto = models.ImageField(upload_to='imagens/ministrantes', null=True, blank=True)
     site = models.URLField('Site/Blog', blank=True, null=True)
     
     def __unicode__(self):
