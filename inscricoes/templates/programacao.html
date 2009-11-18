@@ -61,7 +61,12 @@
                         <span class="label">Público-alvo: </span>{{ minicurso.publico_alvo}}
                     </div>
                     <div class="minievento_atributo">
-                        <span class="label">Vagas Disponíveis: </span>{{ minicurso.vagas_disponiveis}}
+                        <span class="label">Vagas Disponíveis: </span>
+                        {% ifnotequal minicurso.vagas_disponiveis 0 %}
+                            {{ minicurso.vagas_disponiveis}}
+                        {% else %}
+                            Lista de Espera
+                        {% endifnotequal %}
                     </div>
                 </div>
             {% endfor %}
@@ -103,7 +108,7 @@
         </div>
         <div class="minicursos">
             <div class="minicursos_subtitulo">
-                Minicursos
+                Minicursos e Treinamentos
             </div>
             {% for minicurso in minicursos_dia_28 %}
                 <div class="minievento">
@@ -126,7 +131,12 @@
                         <span class="label">Público-alvo: </span>{{ minicurso.publico_alvo}}
                     </div>
                     <div class="minievento_atributo">
-                        <span class="label">Vagas Disponíveis: </span>{{ minicurso.vagas_disponiveis}}
+                        <span class="label">Vagas Disponíveis: </span>
+                        {% ifnotequal minicurso.vagas_disponiveis 0 %}
+                            {{ minicurso.vagas_disponiveis}}
+                        {% else %}
+                            Lista de Espera
+                        {% endifnotequal %}
                     </div>
                 </div>
             {% endfor %}

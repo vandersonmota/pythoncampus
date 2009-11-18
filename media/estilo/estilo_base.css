@@ -166,7 +166,7 @@ body {
     padding-left:5px;
     font-size:large;
     width:auto;
-    color:#da2827;
+    color: #ff0000;
     font-weight: bold;
     /*border-bottom:1px solid #eeeeee;*/
 }
@@ -257,10 +257,17 @@ body {
     font-size: large;
 }
 
-.aviso {
+.aviso, .aviso_404 {
     padding-left: 7px;
     font-size: large;
-    color: red;
+    color: #ff0000;
+}
+
+.aviso_minicurso {
+    padding-left: 7px;
+    font-size: 10pt;
+    color: #ff0000;
+    text-decoration: underline;
 }
 
 /* Fim estilo pagina de sucesso inscriçao*/
@@ -490,4 +497,13 @@ body {
 
 .info_ministrante {
 	display: block;
+}
+
+.404_principal {
+  min-height: 380px;
+}
+
+.voltar a {
+    color:#669933;
+    margin-left: 5px;
 }

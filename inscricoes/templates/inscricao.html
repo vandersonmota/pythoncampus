@@ -8,17 +8,46 @@
     <div class="titulo_pagina">Informações Cadastrais</div>
     <div class="formulario_div">
         <form action="" method="post">
-            {% for field in form %}
-                <div class="campo_div">
-                    <fieldset>
-                        <legend>{{ field.label_tag }}:</legend>
-                        <div class="campo">{{ field }}</div>
-                        <div class="campo_erro">{{ field.errors }}</div>
-                    </fieldset>
-                </div>
-            {% endfor %}
-            <div class="subtitulo_pagina">
-               Para garantir sua vaga nos minicursos, traga 1kg de arroz, feijão ou macarrão para cada minicurso no qual você estiver inscrito até 26/11/2009.
+            <div class="campo_div">
+                <fieldset>
+                    <legend>{{ form.nome.label_tag }}:</legend>
+                    <div class="campo">{{ form.nome }}</div>
+                    <div class="campo_erro">{{ form.nome.errors }}</div>
+                </fieldset>
+            </div>
+            <div class="campo_div">
+                <fieldset>
+                    <legend>{{ form.instituicao.label_tag }}:</legend>
+                    <div class="campo">{{ form.instituicao }}</div>
+                    <div class="campo_erro">{{ form.instituicao.errors }}</div>
+                </fieldset>
+            </div>
+            <div class="campo_div">
+                <fieldset>
+                    <legend>{{ form.cpf.label_tag }}:</legend>
+                    <div class="campo">{{ form.cpf }}</div>
+                    <div class="campo_erro">{{ form.cpf.errors }}</div>
+                </fieldset>
+            </div>
+            <div class="campo_div">
+                <fieldset>
+                    <legend>{{ form.email.label_tag }}:</legend>
+                    <div class="campo">{{ form.email }}</div>
+                    <div class="campo_erro">{{ form.email.errors }}</div>
+                </fieldset>
+            </div>
+            <div class="aviso_minicurso">
+                Para participar apenas das palestras, deixe o campo abaixo em branco e clique em " Confirmar inscrição ".
+            </div>
+            <div class="campo_div">
+                <fieldset>
+                    <legend>{{ form.minicurso.label_tag }}:</legend>
+                    <div class="campo">{{ form.minicurso }}</div>
+                    <div class="campo_erro">{{ form.minicursos.errors }}</div>
+                </fieldset>
+            </div>
+            <div class="aviso">
+               Caso escolha algum minicurso, para confirmar sua vaga, traga 1kg de arroz, feijão ou macarrão para cada minicurso no qual você estiver inscrito até 26/11/2009.
             </div>
             <div class="campo">
                 <input type="submit" value=" Confirmar inscrição " />
