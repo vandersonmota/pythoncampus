@@ -41,6 +41,13 @@ body {
     z-index:4;
 }
 
+#asn-warning {
+    z-index:1000;
+    height: 60px;
+    font-size: medium !important;
+    color: #da2827 !important;
+}
+
 .logo {
     background : url('/media/imagens/sitelogop.png');
     background-repeat: no-repeat;
@@ -204,6 +211,7 @@ body {
 
 .texto_pagina_principal {
     /*border-left: 1px solid #669933;*/
+
     _margin-top: 180px !important;
     margin-left: 335px;
     padding-left: 7px;
