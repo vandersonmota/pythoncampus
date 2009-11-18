@@ -23,20 +23,22 @@
                         <span class="label">Descrição: </span>{{ palestra.descricao|linebreaksbr }}
                     </div>
                     <div class="minievento_atributo">
-                        <span class="label">Ministrante:</span>
-                        <a class="info_ministrante" href="/ministrante/{{palestra.palestrante.id}}">
-                          {{ palestra.palestrante}}
-                        </a>
+                        <span class="label">Palestrantes:</span>
+                        {% for palestrante in palestra.palestrante.all %}
+                            <a class="info_ministrante" href="/ministrante/{{palestrante.id}}">
+                              {{palestrante}}
+                            </a>
+                        {% endfor %}
                     </div>
-                    <div class="minievento_atributo">
+                    <!--<div class="minievento_atributo">
                         <span class="label">Público-alvo: </span>{{ palestra.publico_alvo}}
-                    </div>
+                    </div>-->
                 </div>
             {% endfor %}
         </div>
         <div class="minicursos">
             <div class="minicursos_subtitulo">
-                Minicursos
+                Minicursos e Treinamentos
             </div>
             {% for minicurso in minicursos_dia_27 %}
                 <div class="minievento">
@@ -86,14 +88,16 @@
                         <span class="label">Descrição: </span>{{ palestra.descricao|linebreaksbr }}
                     </div>
                     <div class="minievento_atributo">
-                        <span class="label">Ministrante:</span>
-                        <a class="info_ministrante" href="/ministrante/{{palestra.palestrante.id}}">
-                          {{ palestra.palestrante}}
-                        </a>
+                        <span class="label">Palestrantes:</span>
+                        {% for palestrante in palestra.palestrante.all %}
+                            <a class="info_ministrante" href="/ministrante/{{palestrante.id}}">
+                              {{palestrante}}
+                            </a>
+                        {% endfor %}
                     </div>
-                    <div class="minievento_atributo">
+                    <!--<div class="minievento_atributo">
                         <span class="label">Público-alvo: </span>{{ palestra.publico_alvo}}
-                    </div>
+                    </div>-->
                 </div>
             {% endfor %}
         </div>

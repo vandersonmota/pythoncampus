@@ -4,7 +4,7 @@
     <script type="text/javascript" src="{{ MEDIA_URL }}javascripts/funcoes.js">
     </script>
 {% endblock scripts %}
-{% block conteudo %}
+{% block conteudo %}    
     <div class="titulo_pagina">Informações Cadastrais</div>
     <div class="formulario_div">
         <form action="" method="post">
@@ -17,7 +17,9 @@
                     </fieldset>
                 </div>
             {% endfor %}
-            <div class="subtitulo_pagina">Selecione apenas os minicursos que você realmente deseja participar!</div>
+            <div class="subtitulo_pagina">
+               Para garantir sua vaga nos minicursos, traga 1kg de arroz, feijão ou macarrão para cada minicurso no qual você estiver inscrito até 26/11/2009.
+            </div>
             <div class="campo">
                 <input type="submit" value=" Confirmar inscrição " />
             </div>

@@ -5,7 +5,6 @@ from models import Inscrito, Ministrante, MiniCurso
 
 from os import path
 from django.test.client import Client
-from windmill.authoring import djangotest
 
       
     

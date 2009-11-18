@@ -9,7 +9,7 @@ body {
 .conteudo {
     display         : block;
     background-color: white;
-    margin-top      : 150px;
+    /*margin-top      : 150px;*/
     height: 100%;
 }
 
@@ -23,19 +23,26 @@ body {
     width           : 760px;
 }
 
+#asn-warning {
+    z-index:1000;
+    height: 60px;
+    font-size: medium !important;
+    color: #da2827 !important;
+}
+
 .topo {
     display         : block;
     height          : 140px;
     left            : 50%;
     margin-left     : -381px;
-    position        : fixed;
+    /*position        : fixed;*/
     width           : 760px;
-    background-color: white;
+    /*background-color: white;*/
     z-index:4;
 }
 
 .logo {
-    background : url('/media/imagens/pythoncampusNSI.png');
+    background : url('/media/imagens/sitelogop.png');
     background-repeat: no-repeat;
     background-color: transparent;
     width: 400px;
@@ -54,7 +61,7 @@ body {
 
 * html .topo {
     background-color: transparent;
-    position        : fixed;
+    /*position        : fixed;*/
     height: auto;
 }
 /* end */
@@ -72,6 +79,7 @@ body {
     padding            : 0px;
     position           : absolute;
     top                : 50px;
+    *top               : 65px; /* IE 7 Hack - Maldito IE */
     white-space        : nowrap;
     width              : 818px;
     z-index            : 2;
@@ -121,7 +129,7 @@ body {
     background-color: transparent;
     width: 29px;
     height: 32px;
-    right: -30px;
+    right: -29px;
     top: 142px !important;
 }
 
@@ -135,10 +143,11 @@ body {
     background-color: transparent;
     width: 30px;
     height: 32px;
-    left: -29px;
+    left: -30px;
 }
 
 .titulo_pagina {
+    _margin-top: 150px;
     margin-left: 7px;
     margin-right: 7px;
     padding-top: 20px;
@@ -158,6 +167,8 @@ body {
 .imagem_principal {
     /*border-top: 1px solid #669933;*/
     /*border-right: 1px solid #669933;*/
+    margin-top: 30px;
+    _margin-top: 180px !important;
     background-color: #ffffff;
     background-image: url("/media/imagens/garotapythoncampus.png");
     background-repeat: no-repeat;
@@ -170,9 +181,17 @@ body {
     background-color: #669933;
     color: #ffffff;
     padding:5px;
+    padding-bottom: 0px !important;
     text-align:center;
     clear:left;
     font-size: small;
+}
+
+.links_rodape {
+    float:left;
+    width:450px;
+    height:20px;
+    text-align:right;
 }
 
 .links_rodape a{
@@ -185,6 +204,7 @@ body {
 
 .texto_pagina_principal {
     /*border-left: 1px solid #669933;*/
+    _margin-top: 180px !important;
     margin-left: 335px;
     padding-left: 7px;
     padding-top: 80px;
@@ -229,6 +249,12 @@ body {
     font-size: large;
 }
 
+.aviso {
+    padding-left: 7px;
+    font-size: large;
+    color: red;
+}
+
 /* Fim estilo pagina de sucesso inscriçao*/
 
 /* estilo programação */
@@ -262,6 +288,7 @@ body {
     /*border-bottom: 1px solid #da2827;*/
     background-color: white;
     z-index:0;
+    margin-bottom: 5px;
 }
 
 .palestras {
@@ -369,7 +396,7 @@ body {
     margin-bottom: 4px;
     margin-right:7px;
     margin-left: 7px;
-    position: relative;
+    /*position: relative;*/
 }
 
 .ministrante_titulo {
@@ -383,22 +410,25 @@ body {
 .ministrante_foto {
     margin-top: 5px;
     margin-left: 5px;
-    width: 25%;
+    margin-right: 10px;
+    /*width: 25%;*/
+    float: left;
 }
 .ministrante_foto img {
-    width: 100px;
+    /*width: 100px;*/
     height: 120px;
 }
 
 .ministrante_infos {
-    margin-left: 120px;
+    margin-left: 5px;
     margin-top: 5px;
-    padding-left: 10px;
-    min-height: 120px;
-    position:absolute;
-    top: 20px;
-    margin-right: 0pt;
-    float: left;
+    margin-bottom: 5px;
+    /*padding-left: 10px;*/
+    /*min-height: 120px;*/
+    /*position:absolute;*/
+    /*top: 20px;*/
+    /*margin-right: 0pt;*/
+    /*float: left;*/
     /*border-left: 1px solid #669933;*/
 }
 .nome_ministrante {
@@ -409,6 +439,7 @@ body {
 
 .detalhe_ministrante {
     padding-left: 5px;
+    margin-bottom: 5px;
 }
 
 .detalhe_ministrante a {
@@ -420,7 +451,7 @@ body {
 
 /* estilo da página local */
 .map_div {
-    width:500px;
+    width:750px;
     height: 400px;
     margin: 5px;
 }
@@ -442,3 +473,13 @@ body {
     padding-left: 7px;
     font-size: large;
  }
+
+.selo_django_powered {
+    padding-top:5px;
+    text-align: right;
+    margin-right: 0px;
+}
+
+.info_ministrante {
+	display: block;
+}
